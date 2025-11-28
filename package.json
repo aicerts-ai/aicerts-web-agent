@@ -1,0 +1,40 @@
+{
+  "name": "@aicerts/aicerts-web-agent",
+  "version": "1.0.0",
+  "description": "AI-powered browser automation agent",
+  "keywords": [],
+  "homepage": "https://github.com/aicerts-ai/aicerts-web-agent#readme",
+  "bugs": {
+    "url": "https://github.com/aicerts-ai/aicerts-web-agent/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aicerts-ai/aicerts-web-agent.git"
+  },
+  "license": "ISC",
+  "author": "Ashish Suthar <ashish@aicerts.ai>",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "aicerts-web-agent": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node --import tsx index.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "^3.0.5",
+    "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
